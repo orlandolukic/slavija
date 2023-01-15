@@ -1,0 +1,21 @@
+
+.typing-container {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.typing-container .text {
+    align-items: center;
+}
+
+.typing-container .blinker {
+    visibility: hidden;
+    height: 100%;
+    display: flex;
+}
+
+.typing-container .blinker.visible {
+    visibility: visible;
+}

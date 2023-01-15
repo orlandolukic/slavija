@@ -1,0 +1,50 @@
+
+
+@mixin device-mobile {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin device-tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin device-laptop {
+  @media only screen and (min-width: 1025px) and (max-width: 1313px) {
+    @content;
+  }
+}
+
+@mixin device-desktop {
+  @media only screen and (min-width: 1314px) {
+    @content;
+  }
+}
+
+.display-mobile-none {
+  @include device-mobile {
+    display: none;
+  }
+}
+
+.display-tablet-none {
+  @include device-tablet {
+    display: none;
+  }
+}
+
+.display-laptop-none {
+  @include device-laptop {
+    display: none;
+  }
+}
+
+.display-desktop-none {
+  @include device-desktop {
+    display: none;
+  }
+}
+

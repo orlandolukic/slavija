@@ -1,0 +1,12 @@
+.number-placeholder {
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.number-placeholder.count-started  {
+    opacity: 1;
+}
+
+.number-placeholder .number  > div {
+    display: table-cell;
+}

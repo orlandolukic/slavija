@@ -1,0 +1,86 @@
+
+
+.slavija-input-group {
+
+  .wpforms-error {
+    margin: {
+      top: 5px !important;
+    };
+  }
+  input, textarea {
+    outline: none !important;
+    padding: 10px 15px !important;
+    border: 1px solid $color-blue !important;
+    font-family: "SourceSansPro", sans-serif !important;
+    color: $color-blue !important;
+    font-size: 18px !important;
+    transition: 0.2s !important;
+    height: auto !important;
+    border-radius: 3px !important;
+
+    &:active {
+      background-color: #fcfcfc !important;
+    }
+
+    &:focus {
+      border: 1px solid $color-orange !important;
+      background-color: lighten( $color-orange, 50% ) !important;
+    }
+
+    &::placeholder {
+      color: #acacac !important;
+    }
+  }
+
+  textarea {
+    min-height: 200px;
+  }
+
+  .choices {
+
+    &.is-focused {
+      .choices__inner {
+        border: 1px solid $color-orange !important;
+        box-shadow: none !important;
+      }
+
+      background-color: lighten( $color-orange, 50% ) !important;
+    }
+
+    .choices__inner {
+      padding: 8px 15px !important;
+      border: 1px solid $color-blue !important;
+    }
+
+    .choices__list:not(.choices__list--single) {
+      border: 1px solid $color-orange !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .wpforms-field-description {
+    color: #ababab !important;
+  }
+}
+
+.wpforms-submit-container {
+  button[type="submit"] {
+    padding: 15px 25px !important;
+    background-color: $color-orange !important;
+    color: white !important;
+    transition: 0.2s;
+    font-size: 16px !important;
+    font-weight: bold !important;
+
+    &:hover {
+      background-color: lighten( $color-orange, 10% ) !important;
+    }
+
+    &:active {
+      transition: 0s !important;
+      -webkit-box-shadow: inset 0px -4px 41px -28px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px -4px 41px -28px rgba(0,0,0,0.75);
+      box-shadow: inset 0px -4px 41px -28px rgba(0,0,0,0.75);
+    }
+  }
+}

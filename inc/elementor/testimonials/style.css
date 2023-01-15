@@ -1,0 +1,117 @@
+
+.testimonials-wrapper-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-loader {
+    color: white;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(.17,.67,.08,.74);
+}
+
+.testimonials-loader.not-visible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.testimonials-placeholder {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(.17,.67,.08,.74);
+}
+
+.testimonials-placeholder.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.testimonials-placeholder .single-testimonial .writer-placeholder {
+    display: flex;
+    flex-direction: row;
+}
+
+.testimonials-placeholder .testimonial-list {
+    list-style: none;
+    padding: 0;
+    display: table;
+    width: 1100px;
+}
+
+.testimonials-placeholder .testimonial-list .single-testimonial {
+    display: table-cell;
+    position: relative;
+}
+
+.testimonials-placeholder .testimonial-list .single-testimonial:not(:first-child) {
+    padding-left: 150px;
+}
+
+/*
+==============================================================================================
+    Bottom navigation
+==============================================================================================
+ */
+
+.testimonials-bottom-navigation {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    clear: both;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+}
+
+.testimonials-bottom-navigation.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.testimonials-bottom-navigation .testimonials-bottom-navigation-placeholder {
+    display: flex;
+    margin: auto;
+}
+
+.testimonials-bottom-navigation .testimonials-change-button {
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: 0.1s;
+    opacity: 0.5;
+    transform: scale3d(0.8,0.8,0.8);
+}
+
+.testimonials-bottom-navigation .testimonials-change-button.selected {
+    opacity: 0.8;
+    transform: scale3d(1,1,1);
+}
+
+.testimonials-bottom-navigation .testimonials-change-button:hover {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+}
+
+.testimonials-bottom-navigation .testimonials-change-button:not(:first-child) {
+    margin-left: 15px;
+}
+
+.testimonials-bottom-navigation .testimonials-change-button .inner {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+}

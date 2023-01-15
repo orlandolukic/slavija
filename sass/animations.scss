@@ -1,0 +1,40 @@
+
+@keyframes heartbeat
+{
+  $animateFrom: 1;
+  $animateTo: 1.1;
+
+  0%
+  {
+    transform: scale($animateFrom);
+  }
+  20%
+  {
+    transform: scale( $animateTo );
+  }
+  40%
+  {
+    transform: scale($animateFrom);
+  }
+  60%
+  {
+    transform: scale( $animateTo );
+  }
+  80%
+  {
+    transform: scale($animateFrom);
+  }
+  100%
+  {
+    transform: scale($animateFrom);
+  }
+}
+
+.heartbeat-animation
+{
+  animation: heartbeat 2s infinite;
+}
+
+.infinite-animation {
+  animation-iteration-count: infinite;
+}

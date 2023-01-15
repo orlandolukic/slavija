@@ -1,0 +1,14 @@
+
+.trait-widget-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.trait-widget-container > div {
+    display: flex;
+}
+
+.trait-widget-container > .content {
+    flex-direction: column;
+}
+

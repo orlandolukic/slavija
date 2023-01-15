@@ -1,0 +1,250 @@
+# Copyright (C) 2022 Slavija d.o.o.
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Slavija 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/slavija\n"
+"Last-Translator: Luka Orlandic\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-26T13:46:14+01:00\n"
+"PO-Revision-Date: 2022-12-26 14:49+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: slavija\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.3; wp-6.1.1"
+
+#. Theme Name of the theme
+msgid "Slavija"
+msgstr ""
+
+#. Description of the theme
+msgid "Tema za firmu Slavija d.o.o."
+msgstr ""
+
+#. Author of the theme
+msgid "Slavija d.o.o."
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: functions.php:183
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:184
+msgid "Footer"
+msgstr ""
+
+#: functions.php:185
+msgid "Mobilni menu"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:42
+msgid "Klijenti"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:51
+msgid "Ime klijenta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:53
+msgid "Electrolux d.o.o"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:61
+msgid "Veličina fonta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:81
+msgid "Razmak od slike"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:98
+msgid "Boldovan naslov?"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:100
+msgid "Da"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:101
+msgid "Ne"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:110
+msgid "Boja teksta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:119
+msgid "Logo"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:130
+msgid "Dužina slike logo-a"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:150
+msgid "Visina slike logo-a"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:170
+#: inc/elementor/typing-widget/elementor-typing-plugin.php:42
+msgid "Tekst"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:179
+msgid "Opis klijenta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:181
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:208
+msgid "Unesite opis ovde..."
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:182
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:209
+msgid "Unesite opis klijenta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:189
+msgid "Unutrašnji razmak teksta"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:206
+msgid "Dodatni opis"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:216
+msgid "Unutrašnji razmak drugog opisa"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:233
+msgid "Godine & iskustvo"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:242
+msgid "Godina koliko nam je klijent"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:245
+msgid "Unesite broj godina koliko je ovaj komitent naš klijent "
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:252
+msgid "Unutrašnji razmak iskustva"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:269
+msgid "Unutrašnji razmak broja godina"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:286
+msgid "Margine broja godina"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:303
+msgid "Boja teksta \"NAS KLIJENT\""
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:312
+msgid "Boja pozadine broja godina"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:321
+msgid "Zakrivljenost ivica"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:338
+msgid "Boja teksta za broj godina"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:347
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:356
+msgid "Link"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:358
+msgid "https://your-link.com"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:372
+msgid "Svi klijenti"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:386
+msgid "Podešavanja stila"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:394
+msgid "Boja pozadine"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:405
+msgid "Margine"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:417
+msgid "Padding"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:430
+msgid "Senka"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:439
+msgid "Senka [hover]"
+msgstr ""
+
+#: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:463
+msgid "Naš klijent"
+msgstr ""
+
+#: inc/elementor/trait-widget/elementor-trait-plugin.php:43
+msgid "Ikonica"
+msgstr ""
+
+#: inc/html/s-header.php:26
+msgid "Radno vreme:"
+msgstr ""
+
+#: inc/html/s-header.php:27
+msgid "08h - 16h"
+msgstr ""
+
+#: inc/html/s-header.php:32
+msgid "Adresa:"
+msgstr "Address:"
+
+#: inc/html/s-header.php:33
+msgid "Prvomajska 108a, Zemun"
+msgstr ""
+
+#: inc/html/s-header.php:38
+msgid "Kontakt telefon:"
+msgstr ""
+
+#: inc/html/s-header.php:40
+msgid "011 / 31 60 081 | 011 / 30 77 388"
+msgstr ""
+
+#: inc/html/s-header.php:47
+msgid "Sa Vama već 30+ godina"
+msgstr "With you for over 30 years"
+
+#: inc/html/s-header.php:88
+msgid "Zakažite sastanak"
+msgstr ""
+
+#: inc/html/s-header.php:112
+msgid "MENU"
+msgstr ""
+
+#: inc/html/s-header.php:113
+msgid "Tradicija duga 30+ godina"
+msgstr ""

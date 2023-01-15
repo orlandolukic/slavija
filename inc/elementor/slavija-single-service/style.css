@@ -1,0 +1,19 @@
+
+.slavija-single-service-placeholder .image-placeholder {
+    display: flex;
+    overflow: hidden;
+}
+
+.slavija-single-service-placeholder .image-placeholder .img {
+    margin: auto;
+    width: 100%;
+}
+
+.slavija-single-service-placeholder .button {
+    display: inline-block;
+}
+
+.slavija-single-service-placeholder .service-content {
+    margin-left: auto;
+    margin-right: auto;
+}

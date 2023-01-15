@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/*
+Theme Name: Slavija
+Author: Slavija d.o.o.
+Author URI: https://wordpress.org/
+Description: Tema za firmu Slavija d.o.o.
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: slavija
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+Bundled block pattern images:
+Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
+Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
+Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
+Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H
+*/
+
+$color-faded: #b3b3b3;
+$color-blue: #003049;
+$color-red: #D62828;
+$color-orange: #F77F00;
+$color-yellow: #FCBF49;
+$color-grey: #EAE2B7;
+$color-white: #FFFFFF;
+
+@font-face {
+  font-family: DF;
+  src: url("./fonts/Caligorn.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("./fonts/SourceSansPro-Regular.otf") format("otf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "SourceSansPro", sans-serif !important;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-strong {
+  font-weight: bold;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "SourceSansPro", sans-serif;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.color-faded {
+  color: $color-faded;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@import "responsive";
+@import "buttons";
+@import "header";
+@import "inputs";
+@import "animations";

@@ -1,0 +1,40 @@
+
+.client-list-placeholder {
+    cursor: pointer;
+}
+
+.client-list-placeholder .client-placeholder {
+    display: flex;
+    flex-direction: row;
+    transition: 0.2s;
+    overflow: hidden;
+    position: relative;
+}
+
+.client-list-placeholder .client-placeholder a div {
+    color: inherit;
+}
+
+.client-list-placeholder .client-placeholder > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-list-placeholder .client-placeholder .link-popup-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0 0;
+    padding: 15px;
+    background-color: #003049;
+    color: white;
+    transform: scale3d(0.7,0.7,0.7);
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.client-list-placeholder .client-placeholder:hover .link-popup-button {
+    transform: scale3d(1,1,1);
+    opacity: 1;
+}
+

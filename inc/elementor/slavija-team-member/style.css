@@ -1,0 +1,14 @@
+
+.image-placeholder {
+    overflow: hidden;
+}
+
+.image-placeholder img.image {
+    max-width: inherit;
+    transition: 0.2s;
+    position: relative;
+}
+
+.team-member-placeholder:hover img.image {
+    transform: scale3d(1.1,1.1,1.1);
+}
