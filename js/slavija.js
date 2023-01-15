@@ -69,6 +69,7 @@
             isOpeniongMobileMenu = true;
             $(".mobile-menu-placeholder").removeClass("opened");
             setTimeout(function() {
+                $(".mobile-menu-list li").removeClass("children-expanded");
                 $(".mobile-menu-placeholder").hide();
                 isOpeniongMobileMenu = false;
             }, 700);

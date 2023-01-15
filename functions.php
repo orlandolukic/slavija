@@ -221,6 +221,7 @@ add_action('elementor/init', 'category_elementor_init');
  * Slavija Theme.
  */
 require get_template_directory() . "/inc/slavija-theme.php";
+require get_template_directory() . "/inc/slavija-mobile-menu-walker.php";
 require get_template_directory() . "/inc/slavija-menu-walker.php";
 require get_template_directory() . "/inc/elementor/typing-widget/typing-widget.php";
 require get_template_directory() . "/inc/elementor/trait-widget/trait-widget.php";

@@ -35,7 +35,6 @@ class Slavija_Menu_Walker extends Walker_Nav_Menu
             $output .= $item->title;
         }*/
 
-        $output .= "<GG></GG>";
         $output .= "<div class=\"menu-item-wrapper" . ( $this->has_children ? " has-children" : "" ) . "\">";
 
         if ($item->url && $item->url != '#') {
@@ -79,9 +78,9 @@ class Slavija_Menu_Walker extends Walker_Nav_Menu
          * @param int      $depth   Depth of menu item. Used for padding.
          */
         $class_names = implode( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
-        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . ' sdsdsd"' : '';
 
-        $output .= "<div$class_names new-level>";
+        $output .= "<div$class_names new-level>";        
     }
 
     public function end_lvl(&$output, $depth = 0, $args = null)

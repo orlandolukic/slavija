@@ -123,11 +123,12 @@ add_action('wp_footer', 'slavija_footer');
             <?php
             wp_nav_menu(
                 array(
-                    'theme_location' => 'mobile_menu',
-                    'menu_class' =>     'mobile-menu-list',
-                    'link_before'         => "<div class=\"link-inner\"><div class=\"border-bar\"></div>",
-                    "link_after"          => "</div>",
-                    'depth'          => 0,
+                    'theme_location'    => 'mobile_menu',
+                    'menu_class'        => 'mobile-menu-list',
+                    'link_before'       => "<div class=\"link-inner\"><div class=\"border-bar\"></div>",
+                    "link_after"        => "</div>",
+                    'depth'             => 0,
+                    'walker'            => new Slavija_Mobile_Menu_Walker(),// custom walker class.
                 )
             );
             ?>
