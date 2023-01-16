@@ -31,7 +31,7 @@ class SlavijaTheme {
     public static function google_analytics() {
         ?>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7M9JZZGNQ"></script>
-        <script>
+        <script type="text/javascript">
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
