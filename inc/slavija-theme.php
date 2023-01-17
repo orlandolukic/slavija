@@ -10,7 +10,7 @@ class SlavijaTheme {
         add_action("slavija_after_header", "SlavijaTheme::after_header");
         add_action("wp_enqueue_scripts", "SlavijaTheme::enqueue_scripts", 5);
         add_action("wp_head", "SlavijaTheme::initiate_keywords", 0);
-        add_action("wp_head", "SlavijaTheme::google_analytics");
+        add_action("wp_footer", "SlavijaTheme::google_analytics");
         add_action("wp_footer", "SlavijaTheme::schema_org");
     }
 
