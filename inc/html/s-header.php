@@ -4,12 +4,6 @@
 if ( !defined("ABSPATH") )
     exit();
 
-// Put schema org data for the website
-function slavija_footer() {
-    
-}
-add_action('wp_footer', 'slavija_footer');
-
 ?>
 
 <div class="loader-wrapper">
@@ -63,7 +57,7 @@ add_action('wp_footer', 'slavija_footer');
     <div class="container">
        <div class="row">
            <div class="col-2 col-xs-6 col-xs-6 logo-place">
-               <a href="<?= home_url() ?>">
+               <a href="https://slavijadoo.co.rs/">
                    <img src="<?= get_template_directory_uri() ?>/images/logo.png">
                </a>
            </div>
