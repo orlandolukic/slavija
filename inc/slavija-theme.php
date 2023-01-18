@@ -30,13 +30,13 @@ class SlavijaTheme {
 
     public static function google_analytics() {
         ?>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7M9JZZGNQ"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3B9MQ53ZKY"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-            gtag('config', 'G-W7M9JZZGNQ');
+        gtag('config', 'G-3B9MQ53ZKY');
         </script>
         <?php
     }
@@ -46,6 +46,7 @@ class SlavijaTheme {
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="<?= $keywords ?>">
+        <meta name="robots" content="index, follow">
         <?php
     }
 
@@ -68,7 +69,7 @@ class SlavijaTheme {
 
         // Ovlasceni racunovodja
         case 5575:      // SR
-            $kw = __("knjigovodstvo, ovlasceni racunovodja, ovlašćeni računovođa, ovlasceni racunovodja beograd, ovlašćeni računovođa beograd, knjigovodstvo, racunovodstvo, računovodstvo, e fakture, e-fakture", "slavija");
+            $kw = __("knjigovodstvo, ovlasceni racunovodja, ovlašćeni računovođa, ovlasceni racunovodja beograd, ovlašćeni računovođa beograd, racunovodstvo, računovodstvo, e fakture, e-fakture", "slavija");
             break;
 
         // On-line racunovodstvo
