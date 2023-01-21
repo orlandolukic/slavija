@@ -12,6 +12,7 @@ class SlavijaTheme {
         add_action("wp_head", "SlavijaTheme::initiate_keywords", 0);
         add_action("wp_footer", "SlavijaTheme::google_analytics");
         add_action("wp_footer", "SlavijaTheme::schema_org");
+        add_action( 'wpforms_process', 'SlavijaTheme::wpf_dev_process', 10, 3 );
     }
 
     public static function after_header() {
@@ -139,6 +140,22 @@ class SlavijaTheme {
         }
         </script>
         <?php
+    }
+
+    /**
+     * Action that fires during form entry processing after initial field validation.
+     *
+     * @link   https://wpforms.com/developers/wpforms_process/
+     *
+     * @param  array  $fields    Sanitized entry field. values/properties.
+     * @param  array  $entry     Original $_POST global.
+     * @param  array  $form_data Form data and settings.
+     */    
+    public function wpf_dev_process( $fields, $entry, $form_data ) {              
+        $sec_check_value = $fields[9][ 'value' ];
+        if ( $sec_check_value !== "9" )  {
+            wpforms()->process->errors[ $form_data[ 'id' ] ] [ '9' ] = esc_html__( 'Dogodila se greška', 'slavija' );
+        }        
     }
 
 }
