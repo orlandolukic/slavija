@@ -22,9 +22,9 @@ class SlavijaTheme {
     public static function enqueue_scripts() {
 
         wp_enqueue_script('core-linked-list', get_template_directory_uri() . "/js/linked-list.js");
-        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.3");
+        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.4");
 
-        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.3");
+        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.4");
         wp_enqueue_style("bootstrap-grid", get_template_directory_uri() . "/styles/bootstrap-grid.min.css");
         wp_enqueue_style("fontawesome", get_template_directory_uri() . "/styles/fa-all.min.css");
     }

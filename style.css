@@ -6,25 +6,7 @@ Description: Tema za firmu Slavija d.o.o.
 Requires at least: 4.9.6
 Requires PHP: 5.2.4
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: slavija
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-
-Bundled block pattern images:
-Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
-Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
-Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
-Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H
 */
 @font-face {
   font-family: DF;
@@ -701,6 +683,30 @@ body.elementor-editor-active.logged-in .menu-container {
 }
 .scroll-wrapper:active {
   transform: scale3d(1, 1, 1) translateX(0);
+}
+
+.contact-us-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #003049;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  z-index: 9999;
+  border-radius: 50%;
+  margin: 0 20px 140px 0;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  -webkit-box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+}
+.contact-us-button > i {
+  transform: rotate(0deg);
+  font-size: 24px;
+}
+.contact-us-button.not-visible {
+  transform: scale3d(1, 1, 1) translateX(150px);
 }
 
 @keyframes left-to-right {

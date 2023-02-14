@@ -18,6 +18,24 @@ if ( !defined("ABSPATH") )
     </div>
 </div>
 
+<?php 
+
+// Create callto link
+$locale = get_locale();
+if ( $locale == 'sr_RS' ) {
+    $callto_link = "tel:+381653163596";
+} else {
+    $callto_link = "tel:+381629656295";
+}
+
+?>
+
+<a href="<?= $callto_link ?>">
+    <div class="contact-us-button not-visible display-desktop-none display-laptop-none">
+        <i class="fa fa-phone"></i>
+    </div>
+</a>
+
 <div itemscope itemtype="https://schema.org/Organization" class="small-header-top">
     <div class="container">
         <div class="row">

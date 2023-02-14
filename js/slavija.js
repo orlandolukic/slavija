@@ -86,12 +86,15 @@
             }
             $(".menu-container").addClass("middle-fixed").removeClass("fixed");
             $(".scroll-wrapper").addClass("not-visible");
+            $(".contact-us-button").addClass("not-visible");
         } else if ( st >= x ) {
             $(".menu-container").addClass("fixed").addClass("middle-fixed").removeClass("slowly-remove");
             $(".scroll-wrapper").removeClass("not-visible");
+            $(".contact-us-button").removeClass("not-visible");
         } else {
             $(".menu-container").removeClass("fixed").removeClass("middle-fixed").removeClass("slowly-remove");
             $(".scroll-wrapper").addClass("not-visible");
+            $(".contact-us-button").addClass("not-visible");            
         }
 
         last = st;
