@@ -7,16 +7,34 @@ if ( !defined("ABSPATH") )
 class SlavijaTheme {
 
     public static function __initiate() {
+        
+        // Require all necessary files
+        require get_template_directory() . "/inc/helper-functions.php";
+
+        // Add hooks
         add_action("slavija_after_header", "SlavijaTheme::after_header");
         add_action("wp_enqueue_scripts", "SlavijaTheme::enqueue_scripts", 5);
+        add_action("wp_head", "SlavijaTheme::wp_head");
         add_action("wp_head", "SlavijaTheme::initiate_keywords", 0);
         add_action("wp_head", "SlavijaTheme::google_analytics");
         add_action("wp_footer", "SlavijaTheme::schema_org");
         add_action( 'wpforms_process', 'SlavijaTheme::wpf_dev_process', 10, 3 );
+
     }
 
     public static function after_header() {
         require get_template_directory() . "/inc/html/s-header.php";
+    }
+
+    public static function wp_head() {
+        $locale = get_locale();
+        $local_code = get_language_code($locale);
+        $postID = get_contact_us_page_id($locale);
+        ?>
+        <script type="text/javascript">            
+            let apply_for_contact_link = "<?= get_permalink($postID) ?>";
+        </script>
+        <?php
     }
 
     public static function enqueue_scripts() {
@@ -24,7 +42,7 @@ class SlavijaTheme {
         wp_enqueue_script('core-linked-list', get_template_directory_uri() . "/js/linked-list.js");
         wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.4");
 
-        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.6");
+        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.7");
         wp_enqueue_style("bootstrap-grid", get_template_directory_uri() . "/styles/bootstrap-grid.min.css");
         wp_enqueue_style("fontawesome", get_template_directory_uri() . "/styles/fa-all.min.css");
     }

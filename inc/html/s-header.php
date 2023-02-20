@@ -24,8 +24,16 @@ if ( !defined("ABSPATH") )
 $locale = get_locale();
 if ( $locale == 'sr_RS' ) {
     $callto_link = "tel:+381653163596";
-} else {
+    $home_url_suffix = "";
+    $apply_for_contact_button_class = "";
+} else if ( $locale == 'ru_RU' ) {
     $callto_link = "tel:+381629656295";
+    $home_url_suffix = "ru/";
+    $apply_for_contact_button_class = " apply-russia";
+} else if ( $locale == 'en_US' ) {
+    $callto_link = "tel:+381629656295";
+    $home_url_suffix = "en/";   
+    $apply_for_contact_button_class = " apply-usa"; 
 }
 
 ?>
@@ -75,7 +83,7 @@ if ( $locale == 'sr_RS' ) {
     <div class="container">
        <div class="row">
            <div class="col-2 col-xs-6 col-xs-6 logo-place">
-               <a href="https://slavijadoo.co.rs/">
+               <a href="https://slavijadoo.co.rs/<?= $home_url_suffix ?>">
                    <img src="<?= get_template_directory_uri() ?>/images/logo.png">
                </a>
            </div>
@@ -102,7 +110,7 @@ if ( $locale == 'sr_RS' ) {
            </div>
            <div class="col-3 button-place text-right">
 
-               <div class="button medium text-strong apply-for-contact">
+               <div class="button medium text-strong apply-for-contact<?= $apply_for_contact_button_class ?>">
                    <div class="regular">
                        <?= __("Zakažite sastanak", "slavija") ?>
                        <i class="fas fa-angle-double-right main-icon"></i>

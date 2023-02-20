@@ -13,6 +13,8 @@
 
     $(window).on("load", function (e1) {
 
+        let apply_for_contact_link_function = apply_for_contact_link;
+
         if ( $(".welcome-placeholder").length > 0 ) {
             let y = jQuery(".welcome-placeholder").css('height');
             y = y.replace(/px/g, "");
@@ -48,7 +50,7 @@
             $(this).find(".regular").addClass("not-visible");
             $(this).find(".loading").addClass("visible");
             setTimeout(function() {
-                window.location.href = "/zakazite-sastanak";
+                window.location.href = apply_for_contact_link_function;
             }, 1000);
         });
 

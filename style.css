@@ -487,6 +487,11 @@ body.elementor-editor-active.logged-in .menu-container {
 .menu-container .button-place .apply-for-contact:active i {
   animation: none;
 }
+.menu-container .button-place .apply-for-contact.apply-russia {
+  font-size: 18px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 .menu-container .button-place .apply-for-contact i.main-icon {
   animation-name: left-to-right;
   animation-duration: 3s;
