@@ -40,9 +40,9 @@ class SlavijaTheme {
     public static function enqueue_scripts() {
 
         wp_enqueue_script('core-linked-list', get_template_directory_uri() . "/js/linked-list.js");
-        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.4");
+        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.6");
 
-        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.7");
+        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.8");
         wp_enqueue_style("bootstrap-grid", get_template_directory_uri() . "/styles/bootstrap-grid.min.css");
         wp_enqueue_style("fontawesome", get_template_directory_uri() . "/styles/fa-all.min.css");
     }
@@ -86,31 +86,38 @@ class SlavijaTheme {
         switch( $post->ID ) {
         // Homepage
         case 7:         // SR
+        case 7688:      // RU
         // O nama
         case 64:        // SR
+        case 7703:      // RU
         // Usluge, paket usluga
         case 70:        // SR
+        case 7707:      // RU
         default:
             $kw = __("slavija knjigovodstvo, slavija, knjigovodja, knjigovođa, knjigovodstvo, racunovodstvo, računovodstvo, e fakture, e-fakture, zavrsni racun, završni račun, zavrsni racun izrada, završni račun izrada, poresko savetovanje, obračun zarada, obracun zarada, poreske prijave, finansijski izveštaji, finansijski izvestaji, otvaranje firme", "slavija");
             break;
 
         // Ovlasceni racunovodja
         case 5575:      // SR
+        case 7705:      // RU
             $kw = __("knjigovodstvo, ovlasceni racunovodja, ovlašćeni računovođa, ovlasceni racunovodja beograd, ovlašćeni računovođa beograd, racunovodstvo, računovodstvo, e fakture, e-fakture", "slavija");
             break;
 
         // On-line racunovodstvo
         case 93:        // SR
+        case 7709:      // RU
             $kw = __("knjigovodstvo, racunovodstvo online, online racunovodstvo, računovodstvo online, online računovodstvo, online vodjenje knjiga, online knjigovodstvo, online knjigovodstvo beograd, e fakture", "slavija");
             break;
 
         // Izrada zavrsnog racuna
         case 97:        // SR
+        case 7711:      // RU
             $kw = __("knjigovodstvo, izrada zavrsnog racuna, izrada zavrsnog racuna beograd, izrada završnog računa, izrada završnog računa beograd, zavrsni racun iskustvo, završni račun iskustvo", "slavija");
             break;
 
         // Poresko i poslovno savetovanje
         case 91:        // SR
+        case 7713:      // RU
             $kw = __("poresko savetovanje, poresko savetovanje beograd, poslovno savetovanje, poslovno savetovanje beograd, knjigovodstvo konsultacije, knjigovodstvo iskustvo", "slavija");
             break;
         }

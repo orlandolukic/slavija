@@ -11,6 +11,11 @@
         return false;
     }
 
+    // Ensure HTTPS connection with website
+    if ( window.location.protocol !== "https:" ) {
+        window.location.href = "https://" + window.location.hostname + window.location.pathname;
+    }
+
     $(window).on("load", function (e1) {
 
         let apply_for_contact_link_function = apply_for_contact_link;

@@ -26,21 +26,24 @@ if ( $locale == 'sr_RS' ) {
     $callto_link = "tel:+381653163596";
     $home_url_suffix = "";
     $apply_for_contact_button_class = "";
+    $callto_icon = "fa fa-phone";
 } else if ( $locale == 'ru_RU' ) {
-    $callto_link = "tel:+381629656295";
+    $callto_link = "https://wa.me/381629656295";
     $home_url_suffix = "ru/";
     $apply_for_contact_button_class = " apply-russia";
+    $callto_icon = "fab fa-whatsapp";
 } else if ( $locale == 'en_US' ) {
-    $callto_link = "tel:+381629656295";
+    $callto_link = "https://wa.me/381629656295";
     $home_url_suffix = "en/";   
     $apply_for_contact_button_class = " apply-usa"; 
+    $callto_icon = "fab fa-whatsapp";
 }
 
 ?>
 
 <a href="<?= $callto_link ?>">
     <div class="contact-us-button not-visible display-desktop-none display-laptop-none">
-        <i class="fa fa-phone"></i>
+        <i class="<?= $callto_icon ?>"></i>
     </div>
 </a>
 
