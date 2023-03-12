@@ -127,12 +127,7 @@ p {
 }
 .small-header-top .header-elements .header-element {
   display: inline-block;
-  margin-right: 40px;
-}
-@media only screen and (min-width: 1025px) and (max-width: 1313px) {
-  .small-header-top .header-elements .header-element {
-    margin-right: 20px;
-  }
+  margin-right: 20px;
 }
 .small-header-top .header-elements .header-element i:after {
   border-right: 1px solid white;
@@ -440,6 +435,10 @@ body.elementor-editor-active.logged-in .menu-container {
   text-decoration: none;
   color: #FFFFFF;
   position: relative;
+}
+.menu-container .button-place .apply-for-contact.apply-usa {
+  padding: 10px 25px 10px 15px;
+  font-size: 18px;
 }
 .menu-container .button-place .apply-for-contact.disabled {
   pointer-events: none;

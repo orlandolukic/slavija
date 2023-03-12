@@ -1,22 +1,21 @@
 # Copyright (C) 2022 Slavija d.o.o.
 # This file is distributed under the GNU General Public License v2 or later.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Slavija 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/slavija\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Luka Orlandic\n"
+"Language-Team: English (United States)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-03-12 10:50+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2023-03-12 10:54+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: slavija\n"
-"\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.3; wp-6.1.1"
 
 #: inc/slavija-theme.php:162
 msgid "+381 62 965 62 95"
@@ -313,7 +312,7 @@ msgstr ""
 
 #: inc/html/s-header.php:118
 msgid "Zakažite sastanak"
-msgstr ""
+msgstr "Schedule an appointment"
 
 #: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:321
 msgid "Zakrivljenost ivica"
