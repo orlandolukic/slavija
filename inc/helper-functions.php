@@ -18,6 +18,10 @@ function get_language_code($locale) {
 	return "NULL";
 }
 
+/**
+ * Change this function only when adding new language.
+ * Purpose of this function is to extract ID of the contact_us page.
+ */
 function get_contact_us_page_id($locale) {
 	if ( $locale == 'sr_RS' ) {
 		return 4127;
