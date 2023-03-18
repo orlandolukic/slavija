@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2023-03-12 10:50+0000\n"
-"PO-Revision-Date: 2023-03-18 18:05+0000\n"
+"PO-Revision-Date: 2023-03-12 10:54+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: slavija\n"
 "Language: en_US\n"
@@ -88,10 +88,6 @@ msgstr ""
 #: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:53
 msgid "Electrolux d.o.o"
 msgstr ""
-
-#: inc/helper-functions.php:49
-msgid "Engleski"
-msgstr "English"
 
 #: functions.php:184
 msgid "Footer"
@@ -171,7 +167,7 @@ msgstr ""
 msgid "Margine broja godina"
 msgstr ""
 
-#: inc/html/s-header.php:168
+#: inc/html/s-header.php:142
 msgid "MENU"
 msgstr ""
 
@@ -226,9 +222,9 @@ msgstr ""
 msgid "Razmak od slike"
 msgstr ""
 
-#: inc/helper-functions.php:54
-msgid "Ruski"
-msgstr "Russian"
+#: inc/html/s-header.php:77
+msgid "Sa Vama već 30+ godina"
+msgstr ""
 
 #: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:430
 msgid "Senka"
@@ -259,10 +255,6 @@ msgstr ""
 msgid "Srbija"
 msgstr ""
 
-#: inc/helper-functions.php:44
-msgid "Srpski"
-msgstr "Serbian"
-
 #: inc/elementor/slavija-our-clients/elementor-slavija-our-clients-plugin.php:372
 msgid "Svi klijenti"
 msgstr ""
@@ -276,7 +268,7 @@ msgstr ""
 msgid "Tema za firmu Slavija d.o.o."
 msgstr ""
 
-#: inc/html/s-header.php:169
+#: inc/html/s-header.php:143
 msgid "Tradicija duga 30+ godina"
 msgstr ""
 
@@ -318,7 +310,7 @@ msgstr ""
 msgid "Visina slike logo-a"
 msgstr ""
 
-#: inc/html/s-header.php:144
+#: inc/html/s-header.php:118
 msgid "Zakažite sastanak"
 msgstr "Schedule an appointment"
 

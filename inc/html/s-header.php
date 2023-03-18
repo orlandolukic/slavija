@@ -71,11 +71,37 @@ if ( $locale == 'sr_RS' ) {
                     </div>
                 </div>
             </div>
-            <div class="col-3 col-xs-12 text-right">
-                <div class="text-strong">
-                    <i class="fas fa-star"></i>
-                    <?= __("Sa Vama već 30+ godina", "slavija") ?>
-                    <i class="fas fa-star"></i>
+            <div class="col-3 col-xs-12 text-right">                
+                <div class="language-picker">
+                    
+                    <?php 
+                        $selected_language = get_selected_language($locale);
+                    ?>
+                    <div class="language-item chosen">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                        <div class="lang"><?= $selected_language["language_name"] ?></div>
+                    </div>                   
+                    
+                    <div class="language-list">
+                        <?php 
+                            $languages = get_languages_list_other_than($locale);
+                            $i = 0;
+                            foreach ($languages as $key => $value) : 
+                                if ( $i > 0 ) : ?>
+                                <div class="divider"></div>
+                                <?php endif;
+                            ?>                            
+                            <a href="<?= $value["language_link"] ?>">
+                                <div class="language-item">
+                                    <img src="<?= $value["language_image"] ?>" />
+                                    <div class="lang"><?= $value["language_name"] ?></div>
+                                </div>                                
+                            </a>
+                        <?php 
+                            $i++;
+                            endforeach; 
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,6 @@
   width: 100%;
   background-color: #3b3b3b;
   color: white;
-  padding: 10px;
 
   @include device-mobile {
     display: none;
@@ -13,6 +12,10 @@
 
       display: inline-block;
       margin-right: 20px;
+      padding: {
+        top: 10px;
+        bottom: 10px;
+      }
 
       i {
         &:after {
@@ -40,6 +43,107 @@
         transform: translateY(-1px);
       }
     }
+  }
+
+  .language-picker {
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    padding: 10px 15px;
+    transition: 0.5s;
+    position: relative;
+
+    .language-item.chosen {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    
+      img {
+        width: 35px;
+        height: 20px;
+        border: 1px solid rgba($color-orange, 1);
+      }
+      .lang {
+        padding-left: 10px;
+        font-size: 13.6px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    .language-list {
+      visibility: hidden;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 9999;
+      background-color: white;
+      color: $color-blue;
+      min-width: 100%;
+      opacity: 0;
+      transition: 0.3s;
+      transform: translateY(15px);
+      -webkit-box-shadow: -5px -1px 28px -7px rgba(0,0,0,0.75);
+      -moz-box-shadow: -5px -1px 28px -7px rgba(0,0,0,0.75);
+      box-shadow: -5px -1px 28px -7px rgba(0,0,0,0.75);
+      border-radius: 5px 0 5px 5px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .language-item {
+        padding: 10px 20px; 
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        transition: 0.2s;
+      
+        img {
+          width: 35px;
+          height: 20px;
+          border: 1px solid rgba($color-orange, 1);
+        }
+        .lang {
+          padding-left: 10px;
+          font-size: 13.6px;
+          text-transform: uppercase;
+          font-weight: bold;
+          transition: 0.1s;
+        }
+
+        &:active {
+          transform: scale3d(0.9,0.9,0.9);
+        }
+      }
+      // /.language-item
+
+      .divider {
+        height: 1px;
+        background: rgba( $color-orange, 0.3 );
+        width: 100%;
+      }
+
+    }
+
+
+    &:hover {
+      background-color: white;
+      cursor: pointer;
+
+      .language-item.chosen {
+        color: $color-blue;        
+      }
+
+      .language-list {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
+
   }
 }
 
