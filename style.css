@@ -6,25 +6,7 @@ Description: Tema za firmu Slavija d.o.o.
 Requires at least: 4.9.6
 Requires PHP: 5.2.4
 Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: slavija
-Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Twenty Nineteen is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
-
-Bundled block pattern images:
-Abstract Background by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-background-0SRRVNMKBX
-Abstract Waves by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-waves-0KREGLTZQ3
-Abstract Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/abstract-bokeh-P4KVZBMQ6L
-Colorful Bokeh by HD Wallpapers, CC0. https://stocksnap.io/photo/colorful-bokeh-VN4G84GL8H
 */
 @font-face {
   font-family: DF;
@@ -136,7 +118,6 @@ p {
   width: 100%;
   background-color: #3b3b3b;
   color: white;
-  padding: 10px;
 }
 @media only screen and (max-width: 767px) {
   .small-header-top {
@@ -145,7 +126,9 @@ p {
 }
 .small-header-top .header-elements .header-element {
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .small-header-top .header-elements .header-element i:after {
   border-right: 1px solid white;
@@ -167,6 +150,90 @@ p {
   color: #b7b7b7;
   font-size: 85%;
   transform: translateY(-1px);
+}
+.small-header-top .language-picker {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  padding: 10px 15px;
+  transition: 0.5s;
+  position: relative;
+}
+.small-header-top .language-picker .language-item.chosen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.small-header-top .language-picker .language-item.chosen img {
+  width: 35px;
+  height: 20px;
+  border: 1px solid #f77f00;
+}
+.small-header-top .language-picker .language-item.chosen .lang {
+  padding-left: 10px;
+  font-size: 13.6px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.small-header-top .language-picker .language-list {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 9999;
+  background-color: white;
+  color: #003049;
+  min-width: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(15px);
+  -webkit-box-shadow: -5px -1px 28px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px -1px 28px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px -1px 28px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 5px 0 5px 5px;
+}
+.small-header-top .language-picker .language-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.small-header-top .language-picker .language-list .language-item {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.2s;
+}
+.small-header-top .language-picker .language-list .language-item img {
+  width: 35px;
+  height: 20px;
+  border: 1px solid #f77f00;
+}
+.small-header-top .language-picker .language-list .language-item .lang {
+  padding-left: 10px;
+  font-size: 13.6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.1s;
+}
+.small-header-top .language-picker .language-list .language-item:active {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+.small-header-top .language-picker .language-list .divider {
+  height: 1px;
+  background: rgba(247, 127, 0, 0.3);
+  width: 100%;
+}
+.small-header-top .language-picker:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.small-header-top .language-picker:hover .language-item.chosen {
+  color: #003049;
+}
+.small-header-top .language-picker:hover .language-list {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 .menu-container {
@@ -454,6 +521,10 @@ body.elementor-editor-active.logged-in .menu-container {
   color: #FFFFFF;
   position: relative;
 }
+.menu-container .button-place .apply-for-contact.apply-usa {
+  padding: 10px 25px 10px 15px;
+  font-size: 18px;
+}
 .menu-container .button-place .apply-for-contact.disabled {
   pointer-events: none;
   cursor: not-allowed;
@@ -504,6 +575,11 @@ body.elementor-editor-active.logged-in .menu-container {
 }
 .menu-container .button-place .apply-for-contact:active i {
   animation: none;
+}
+.menu-container .button-place .apply-for-contact.apply-russia {
+  font-size: 18px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .menu-container .button-place .apply-for-contact i.main-icon {
   animation-name: left-to-right;
@@ -653,6 +729,73 @@ body.elementor-editor-active.logged-in .menu-container {
 .mobile-menu-placeholder .mobile-menu-list li.menu-item-has-children.children-expanded .caret-expansion > i {
   transform: rotate(-180deg);
 }
+.mobile-menu-placeholder .mobile-menu-language-picker {
+  margin-top: 20px;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-left: 25px;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  justify-content: center;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list a {
+  text-decoration: none;
+  color: inherit;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item .language-item-flag img {
+  width: 40px;
+  height: 25px;
+  border: 1px solid rgba(247, 127, 0, 0.4);
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item .language-item-name {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item .language-item-check-mark {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item.selected {
+  background-color: rgba(247, 127, 0, 0.8);
+  color: white;
+  -webkit-box-shadow: 4px -2px 36px -21px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px -2px 36px -21px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px -2px 36px -21px rgba(0, 0, 0, 0.75);
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item.selected .language-item-check-mark {
+  display: block;
+}
+.mobile-menu-placeholder .mobile-menu-language-picker .language-list .language-item.selected .language-item-name {
+  font-weight: bold;
+}
+.mobile-menu-placeholder .footer-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+}
 
 .loader-wrapper {
   top: 0;
@@ -701,6 +844,30 @@ body.elementor-editor-active.logged-in .menu-container {
 }
 .scroll-wrapper:active {
   transform: scale3d(1, 1, 1) translateX(0);
+}
+
+.contact-us-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #003049;
+  color: #FFFFFF;
+  padding: 15px;
+  z-index: 9999;
+  border-radius: 50%;
+  margin: 0 24px 140px 0;
+  transition: 0.3s;
+  transition-delay: 0.2s;
+  -webkit-box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 18px -7px rgba(0, 0, 0, 0.75);
+}
+.contact-us-button > i {
+  transform: rotate(0deg);
+  font-size: 24px;
+}
+.contact-us-button.not-visible {
+  transform: scale3d(1, 1, 1) translateX(150px);
 }
 
 @keyframes left-to-right {

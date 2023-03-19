@@ -4,12 +4,6 @@
 if ( !defined("ABSPATH") )
     exit();
 
-// Put schema org data for the website
-function slavija_footer() {
-    
-}
-add_action('wp_footer', 'slavija_footer');
-
 ?>
 
 <div class="loader-wrapper">
@@ -23,6 +17,35 @@ add_action('wp_footer', 'slavija_footer');
         <i class="fas fa-chevron-up"></i>
     </div>
 </div>
+
+<?php 
+
+// Create callto link
+$locale = get_locale();
+if ( $locale == 'sr_RS' ) {
+    $callto_link = "tel:+381653163596";
+    $home_url_suffix = "";
+    $apply_for_contact_button_class = "";
+    $callto_icon = "fa fa-phone";
+} else if ( $locale == 'ru_RU' ) {
+    $callto_link = "https://wa.me/381629656295";
+    $home_url_suffix = "ru/";
+    $apply_for_contact_button_class = " apply-russia";
+    $callto_icon = "fab fa-whatsapp";
+} else if ( $locale == 'en_US' ) {
+    $callto_link = "https://wa.me/381629656295";
+    $home_url_suffix = "en/";   
+    $apply_for_contact_button_class = " apply-usa"; 
+    $callto_icon = "fab fa-whatsapp";
+}
+
+?>
+
+<a href="<?= $callto_link ?>">
+    <div class="contact-us-button not-visible display-desktop-none display-laptop-none">
+        <i class="<?= $callto_icon ?>"></i>
+    </div>
+</a>
 
 <div itemscope itemtype="https://schema.org/Organization" class="small-header-top">
     <div class="container">
@@ -48,11 +71,37 @@ add_action('wp_footer', 'slavija_footer');
                     </div>
                 </div>
             </div>
-            <div class="col-3 col-xs-12 text-right">
-                <div class="text-strong">
-                    <i class="fas fa-star"></i>
-                    <?= __("Sa Vama već 30+ godina", "slavija") ?>
-                    <i class="fas fa-star"></i>
+            <div class="col-3 col-xs-12 text-right">                
+                <div class="language-picker">
+                    
+                    <?php 
+                        $selected_language = get_selected_language($locale);
+                    ?>
+                    <div class="language-item chosen">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                        <div class="lang"><?= $selected_language["language_name"] ?></div>
+                    </div>                   
+                    
+                    <div class="language-list">
+                        <?php 
+                            $languages = get_languages_list_other_than($locale);
+                            $i = 0;
+                            foreach ($languages as $key => $value) : 
+                                if ( $i > 0 ) : ?>
+                                <div class="divider"></div>
+                                <?php endif;
+                            ?>                            
+                            <a href="<?= $value["language_link"] ?>">
+                                <div class="language-item">
+                                    <img src="<?= $value["language_image"] ?>" />
+                                    <div class="lang"><?= $value["language_name"] ?></div>
+                                </div>                                
+                            </a>
+                        <?php 
+                            $i++;
+                            endforeach; 
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +112,7 @@ add_action('wp_footer', 'slavija_footer');
     <div class="container">
        <div class="row">
            <div class="col-2 col-xs-6 col-xs-6 logo-place">
-               <a href="<?= home_url() ?>">
+               <a href="http://home.slavijadoo.co.rs/<?= $home_url_suffix ?>">
                    <img src="<?= get_template_directory_uri() ?>/images/logo.png">
                </a>
            </div>
@@ -90,7 +139,7 @@ add_action('wp_footer', 'slavija_footer');
            </div>
            <div class="col-3 button-place text-right">
 
-               <div class="button medium text-strong apply-for-contact">
+               <div class="button medium text-strong apply-for-contact<?= $apply_for_contact_button_class ?>">
                    <div class="regular">
                        <?= __("Zakažite sastanak", "slavija") ?>
                        <i class="fas fa-angle-double-right main-icon"></i>
@@ -132,6 +181,42 @@ add_action('wp_footer', 'slavija_footer');
                 )
             );
             ?>
+        </div>
+        <div class="mobile-menu-language-picker">
+            <div class="title"><?= __('Odaberite jezik', 'slavija') ?></div>
+            <div class="language-list">
+
+                <div class="language-item selected">
+                    <div class="language-item-flag">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                    </div>
+                    <div class="language-item-name"><?= $selected_language["language_name"] ?></div>
+                    <div class="language-item-check-mark">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </div>    
+                
+                <?php                     
+                    $i = 0;
+                    foreach ($languages as $key => $value) : ?>                                    
+
+                    <a href="<?= $value["language_link"] ?>">
+                        <div class="language-item">
+                            <div class="language-item-flag">
+                                <img src="<?= $value["language_image"] ?>" />
+                            </div>
+                            <div class="language-item-name"><?= $value["language_name"] ?></div>                            
+                        </div>
+                    </a>
+
+                <?php 
+                    $i++;
+                    endforeach; 
+                ?>                
+            </div>
+            <div class="footer-data">
+                <?= __('Slavija d.o.o | 1988 - 2023', 'slavija') ?>
+            </div>
         </div>
         <div class="mobile-menu-close">
             <i class="fas fa-times fa-2x"></i>

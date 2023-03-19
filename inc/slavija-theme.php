@@ -7,24 +7,42 @@ if ( !defined("ABSPATH") )
 class SlavijaTheme {
 
     public static function __initiate() {
+        
+        // Require all necessary files
+        require get_template_directory() . "/inc/helper-functions.php";
+
+        // Add hooks
         add_action("slavija_after_header", "SlavijaTheme::after_header");
         add_action("wp_enqueue_scripts", "SlavijaTheme::enqueue_scripts", 5);
+        add_action("wp_head", "SlavijaTheme::wp_head");
         add_action("wp_head", "SlavijaTheme::initiate_keywords", 0);
         add_action("wp_footer", "SlavijaTheme::google_analytics");
         add_action("wp_footer", "SlavijaTheme::schema_org");
         add_action( 'wpforms_process', 'SlavijaTheme::wpf_dev_process', 10, 3 );
+
     }
 
     public static function after_header() {
         require get_template_directory() . "/inc/html/s-header.php";
     }
 
+    public static function wp_head() {
+        $locale = get_locale();
+        $local_code = get_language_code($locale);
+        $postID = get_contact_us_page_id($locale);
+        ?>
+        <script type="text/javascript">            
+            let apply_for_contact_link = "<?= get_permalink($postID) ?>";
+        </script>
+        <?php
+    }
+
     public static function enqueue_scripts() {
 
         wp_enqueue_script('core-linked-list', get_template_directory_uri() . "/js/linked-list.js");
-        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.3");
+        wp_enqueue_script('slavija', get_template_directory_uri() . "/js/slavija.js", ['jquery'], "1.0.7");
 
-        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.3");
+        wp_enqueue_style("slavija-theme", get_template_directory_uri() . "/style.css", [], "1.0.9");
         wp_enqueue_style("bootstrap-grid", get_template_directory_uri() . "/styles/bootstrap-grid.min.css");
         wp_enqueue_style("fontawesome", get_template_directory_uri() . "/styles/fa-all.min.css");
     }
@@ -37,8 +55,16 @@ class SlavijaTheme {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-W7M9JZZGNQ');
+        gtag('config', 'G-3B9MQ53ZKY');
         </script>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NJBC2NZ');</script>
+        <!-- End Google Tag Manager -->
         <?php
     }
 
@@ -47,6 +73,7 @@ class SlavijaTheme {
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="<?= $keywords ?>">
+        <meta name="robots" content="noindex, nofollow">
         <?php
     }
 
@@ -59,31 +86,38 @@ class SlavijaTheme {
         switch( $post->ID ) {
         // Homepage
         case 7:         // SR
+        case 7688:      // RU
         // O nama
         case 64:        // SR
+        case 7703:      // RU
         // Usluge, paket usluga
         case 70:        // SR
+        case 7707:      // RU
         default:
             $kw = __("slavija knjigovodstvo, slavija, knjigovodja, knjigovođa, knjigovodstvo, racunovodstvo, računovodstvo, e fakture, e-fakture, zavrsni racun, završni račun, zavrsni racun izrada, završni račun izrada, poresko savetovanje, obračun zarada, obracun zarada, poreske prijave, finansijski izveštaji, finansijski izvestaji, otvaranje firme", "slavija");
             break;
 
         // Ovlasceni racunovodja
         case 5575:      // SR
-            $kw = __("knjigovodstvo, ovlasceni racunovodja, ovlašćeni računovođa, ovlasceni racunovodja beograd, ovlašćeni računovođa beograd, knjigovodstvo, racunovodstvo, računovodstvo, e fakture, e-fakture", "slavija");
+        case 7705:      // RU
+            $kw = __("knjigovodstvo, ovlasceni racunovodja, ovlašćeni računovođa, ovlasceni racunovodja beograd, ovlašćeni računovođa beograd, racunovodstvo, računovodstvo, e fakture, e-fakture", "slavija");
             break;
 
         // On-line racunovodstvo
         case 93:        // SR
+        case 7709:      // RU
             $kw = __("knjigovodstvo, racunovodstvo online, online racunovodstvo, računovodstvo online, online računovodstvo, online vodjenje knjiga, online knjigovodstvo, online knjigovodstvo beograd, e fakture", "slavija");
             break;
 
         // Izrada zavrsnog racuna
         case 97:        // SR
+        case 7711:      // RU
             $kw = __("knjigovodstvo, izrada zavrsnog racuna, izrada zavrsnog racuna beograd, izrada završnog računa, izrada završnog računa beograd, zavrsni racun iskustvo, završni račun iskustvo", "slavija");
             break;
 
         // Poresko i poslovno savetovanje
         case 91:        // SR
+        case 7713:      // RU
             $kw = __("poresko savetovanje, poresko savetovanje beograd, poslovno savetovanje, poslovno savetovanje beograd, knjigovodstvo konsultacije, knjigovodstvo iskustvo", "slavija");
             break;
         }
@@ -157,6 +191,7 @@ class SlavijaTheme {
             wpforms()->process->errors[ $form_data[ 'id' ] ] [ '9' ] = esc_html__( 'Dogodila se greška', 'slavija' );
         }        
     }
+
 }
 
 // Initiate all actions for this theme.

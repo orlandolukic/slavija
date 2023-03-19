@@ -13,6 +13,8 @@
 
     $(window).on("load", function (e1) {
 
+        let apply_for_contact_link_function = apply_for_contact_link;
+
         if ( $(".welcome-placeholder").length > 0 ) {
             let y = jQuery(".welcome-placeholder").css('height');
             y = y.replace(/px/g, "");
@@ -48,7 +50,7 @@
             $(this).find(".regular").addClass("not-visible");
             $(this).find(".loading").addClass("visible");
             setTimeout(function() {
-                window.location.href = "/zakazite-sastanak";
+                window.location.href = apply_for_contact_link_function;
             }, 1000);
         });
 
@@ -86,12 +88,15 @@
             }
             $(".menu-container").addClass("middle-fixed").removeClass("fixed");
             $(".scroll-wrapper").addClass("not-visible");
+            $(".contact-us-button").addClass("not-visible");
         } else if ( st >= x ) {
             $(".menu-container").addClass("fixed").addClass("middle-fixed").removeClass("slowly-remove");
             $(".scroll-wrapper").removeClass("not-visible");
+            $(".contact-us-button").removeClass("not-visible");
         } else {
             $(".menu-container").removeClass("fixed").removeClass("middle-fixed").removeClass("slowly-remove");
             $(".scroll-wrapper").addClass("not-visible");
+            $(".contact-us-button").addClass("not-visible");            
         }
 
         last = st;
