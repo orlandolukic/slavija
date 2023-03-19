@@ -71,11 +71,37 @@ if ( $locale == 'sr_RS' ) {
                     </div>
                 </div>
             </div>
-            <div class="col-3 col-xs-12 text-right">
-                <div class="text-strong">
-                    <i class="fas fa-star"></i>
-                    <?= __("Sa Vama već 30+ godina", "slavija") ?>
-                    <i class="fas fa-star"></i>
+            <div class="col-3 col-xs-12 text-right">                
+                <div class="language-picker">
+                    
+                    <?php 
+                        $selected_language = get_selected_language($locale);
+                    ?>
+                    <div class="language-item chosen">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                        <div class="lang"><?= $selected_language["language_name"] ?></div>
+                    </div>                   
+                    
+                    <div class="language-list">
+                        <?php 
+                            $languages = get_languages_list_other_than($locale);
+                            $i = 0;
+                            foreach ($languages as $key => $value) : 
+                                if ( $i > 0 ) : ?>
+                                <div class="divider"></div>
+                                <?php endif;
+                            ?>                            
+                            <a href="<?= $value["language_link"] ?>">
+                                <div class="language-item">
+                                    <img src="<?= $value["language_image"] ?>" />
+                                    <div class="lang"><?= $value["language_name"] ?></div>
+                                </div>                                
+                            </a>
+                        <?php 
+                            $i++;
+                            endforeach; 
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +112,7 @@ if ( $locale == 'sr_RS' ) {
     <div class="container">
        <div class="row">
            <div class="col-2 col-xs-6 col-xs-6 logo-place">
-               <a href="https://slavijadoo.co.rs/<?= $home_url_suffix ?>">
+               <a href="http://home.slavijadoo.co.rs/<?= $home_url_suffix ?>">
                    <img src="<?= get_template_directory_uri() ?>/images/logo.png">
                </a>
            </div>
@@ -155,6 +181,42 @@ if ( $locale == 'sr_RS' ) {
                 )
             );
             ?>
+        </div>
+        <div class="mobile-menu-language-picker">
+            <div class="title"><?= __('Odaberite jezik', 'slavija') ?></div>
+            <div class="language-list">
+
+                <div class="language-item selected">
+                    <div class="language-item-flag">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                    </div>
+                    <div class="language-item-name"><?= $selected_language["language_name"] ?></div>
+                    <div class="language-item-check-mark">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </div>    
+                
+                <?php                     
+                    $i = 0;
+                    foreach ($languages as $key => $value) : ?>                                    
+
+                    <a href="<?= $value["language_link"] ?>">
+                        <div class="language-item">
+                            <div class="language-item-flag">
+                                <img src="<?= $value["language_image"] ?>" />
+                            </div>
+                            <div class="language-item-name"><?= $value["language_name"] ?></div>                            
+                        </div>
+                    </a>
+
+                <?php 
+                    $i++;
+                    endforeach; 
+                ?>                
+            </div>
+            <div class="footer-data">
+                <?= __('Slavija d.o.o | 1988 - 2023', 'slavija') ?>
+            </div>
         </div>
         <div class="mobile-menu-close">
             <i class="fas fa-times fa-2x"></i>
