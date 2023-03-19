@@ -182,6 +182,42 @@ if ( $locale == 'sr_RS' ) {
             );
             ?>
         </div>
+        <div class="mobile-menu-language-picker">
+            <div class="title"><?= __('Odaberite jezik', 'slavija') ?></div>
+            <div class="language-list">
+
+                <div class="language-item selected">
+                    <div class="language-item-flag">
+                        <img src="<?= $selected_language["language_image"] ?>" />
+                    </div>
+                    <div class="language-item-name"><?= $selected_language["language_name"] ?></div>
+                    <div class="language-item-check-mark">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </div>    
+                
+                <?php                     
+                    $i = 0;
+                    foreach ($languages as $key => $value) : ?>                                    
+
+                    <a href="<?= $value["language_link"] ?>">
+                        <div class="language-item">
+                            <div class="language-item-flag">
+                                <img src="<?= $value["language_image"] ?>" />
+                            </div>
+                            <div class="language-item-name"><?= $value["language_name"] ?></div>                            
+                        </div>
+                    </a>
+
+                <?php 
+                    $i++;
+                    endforeach; 
+                ?>                
+            </div>
+            <div class="footer-data">
+                <?= __('Slavija d.o.o | 1988 - 2023', 'slavija') ?>
+            </div>
+        </div>
         <div class="mobile-menu-close">
             <i class="fas fa-times fa-2x"></i>
         </div>

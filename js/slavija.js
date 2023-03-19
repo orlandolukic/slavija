@@ -54,6 +54,11 @@
             }, 1000);
         });
 
+        $(".mobile-menu-placeholder").show(function() {
+            $(this).addClass("opened");
+            isOpeniongMobileMenu = false;
+        });
+
         $(".mobile-menu-icon div.icon").on("click", function(e) {
             if ( isOpeniongMobileMenu )
                 return;
