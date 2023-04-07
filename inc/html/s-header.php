@@ -112,7 +112,7 @@ if ( $locale == 'sr_RS' ) {
     <div class="container">
        <div class="row">
            <div class="col-2 col-xs-6 col-xs-6 logo-place">
-               <a href="http://home.slavijadoo.co.rs/<?= $home_url_suffix ?>">
+               <a href="http://slavijadoo.co.rs/<?= $home_url_suffix ?>">
                    <img src="<?= get_template_directory_uri() ?>/images/logo.png">
                </a>
            </div>
