@@ -28,12 +28,12 @@ if ( $locale == 'sr_RS' ) {
     $apply_for_contact_button_class = "";
     $callto_icon = "fa fa-phone";
 } else if ( $locale == 'ru_RU' ) {
-    $callto_link = "https://wa.me/381629656295";
+    $callto_link = "https://wa.me/381653163596";
     $home_url_suffix = "ru/";
     $apply_for_contact_button_class = " apply-russia";
     $callto_icon = "fab fa-whatsapp";
 } else if ( $locale == 'en_US' ) {
-    $callto_link = "https://wa.me/381629656295";
+    $callto_link = "https://wa.me/381653163596";
     $home_url_suffix = "en/";   
     $apply_for_contact_button_class = " apply-usa"; 
     $callto_icon = "fab fa-whatsapp";

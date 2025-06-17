@@ -158,10 +158,6 @@ class SlavijaTheme {
                     "telephone" : "<?= __("+381 65 316 35 96", "slavija") ?>",
                     "contactType" : "<?= __("Dragan Orlandic", "slavija") ?>"
                 },
-                { "@type" : "ContactPoint",
-                    "telephone" : "<?= __("+381 62 965 62 95", "slavija") ?>",
-                    "contactType" : "<?= __("Ognjan Arlov", "slavija") ?>"
-                }
             ],
             "founder": {
                 "@context": "https://schema.org",
